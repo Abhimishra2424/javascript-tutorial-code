@@ -1,13 +1,11 @@
 1--> variable and values in js
 
-var myname = 'abhishek mishra'; 
+var myname = 'abhishek mishra';
 console.log(myname)
-
 
 var mylist ="mongo, banna, samosa";
 var myAge =28;
 console.log(mylist , myAge)
- 
 
 var $myname = 'abhiiii'
 console.log($myname)
@@ -31,14 +29,12 @@ var num =   'abhi' + 'mishra';
 console.log( 2 - '6');
 console.log(typeof(num));
 
-
 interview question//////////////////////////////////////////
 Difference between null vs undefined ?
 
 var iamuseless =null;
 console.log(null);
 console.log(typeof(iamuseless));
-
 
 var iamstandby;
 console.log(iamstandby);
@@ -75,7 +71,7 @@ console.log(3+5);
 console.log(3-5);
 console.log(3*5);
 console.log(3/5);
- 
+
 // % is called moduls operator
 console.log("Remainder Operator "+ 27%4);
 
@@ -86,8 +82,7 @@ var newNum = num++ + 5 ;
 console.log(num);
 console.log(newNum);
 
-
-prefix 
+prefix
 var num = 15;
 var newNum = ++num + 5;
 console.log(num);
@@ -123,7 +118,7 @@ less than equal
 console.log(a <= b);
 
 /////// logical operators//////
-AND (&&) 
+AND (&&)
 t and t = t
 f and t = f
 t and f  = f
@@ -131,7 +126,7 @@ var a = 10;
 var b = -30;
 console.log (a > b && b < 0);
 OR ( || )
-t or f = t 
+t or f = t
 f or f = f
 f or t = t
 console.log ( (a < b) || ( b < -30 ) );
@@ -164,7 +159,7 @@ a = a - b; // a = 10
 console.log(a);
 console.log(b);
 
-interview question 
+interview question
 what is Difference between == and ===
 var num1 = 5
 var num2 = '5';
@@ -218,6 +213,27 @@ if(age >= 18){
 }else{
     console.log("you are not eligible to vote");
 }
-this is called ternary 
+this is called ternary
 var age = 17;
 console.log((age > 18) ? "you can eligible to vote" : "you are not eligible to vote");
+
+switch Statement
+evaluates an  expression matching the expression value to a
+case clause and exexutes statements associated with that case.
+
+find the area of circle triangle and rectangles
+
+var area = "circle";
+var PI = 3.142,
+  l = 5,
+  b = 4,
+  r = 3;
+if (area == "circle") {
+  console.log("the area of the circle is :" + PI * r ** 2);
+} else if (area == "triangle") {
+  console.log("the area of the triangle is :" + (l * b) / 2);
+} else if (area == "rectangle") {
+  console.log("the area of the rectangle is :" + l * b);
+} else {
+  console.log("please enter valid data");
+}
