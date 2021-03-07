@@ -201,8 +201,23 @@ what is the truthy and falsy value in javascript
  we have 5 total falsy values in javascript
 0 , "" ,  undefined , null , NaN false ,
 
-if (score = null){
+if (NaN){
     console.log("ya we won the game")
 }else{
     console.log("we loss the game")
 }
+
+condition ( ternary) operators //////
+the conditional ternary is the only javascript operator
+that takes three operands
+
+var age = 18;
+
+if(age >= 18){
+    console.log("you are eligible to vote");
+}else{
+    console.log("you are not eligible to vote");
+}
+this is called ternary 
+var age = 17;
+console.log((age > 18) ? "you can eligible to vote" : "you are not eligible to vote");
