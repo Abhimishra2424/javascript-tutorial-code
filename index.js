@@ -106,7 +106,7 @@ var a= 90;
 var b=100;
 equal
 console.log(a == b);
-not euqal
+not equal
 console.log(a !== b);
 greater than
 console.log(a > b);
@@ -217,7 +217,7 @@ this is called ternary
 var age = 17;
 console.log((age > 18) ? "you can eligible to vote" : "you are not eligible to vote");
 
-switch Statement
+            switch Statement /////////////////
 evaluates an  expression matching the expression value to a
 case clause and exexutes statements associated with that case.
 
@@ -237,3 +237,53 @@ if (area == "circle") {
 } else {
   console.log("please enter valid data");
 }
+thisisme ko This_is_me karo aisa kuch hai yeh
+var input = "ThisISMe";
+console.log(input.substring(0,4).toLowerCase()+"_"+input.substring(2,4).toLowerCase()+"_"+input.substring(6,8).toLowerCase());
+
+var area = "circle";
+var PI = 3.142,
+  l = 5,
+  b = 4,
+  r = 3;
+switch (area) {
+  case "circle":
+    console.log("the area of the circle is :" + PI * r ** 2);
+    break;
+  case "trianlge":
+    console.log("the area of the triangle is :" + (l * b) / 2);
+    break;
+  case "rectangle":
+    console.log("the area of the rectangle is :" + l * b);
+    break;
+  default:
+    console.log("please enter valid data");
+}
+
+we have break statement matlab khatm
+Terminates the current loop , switch , or label
+statement and transfers
+program control to the statement following the break statement
+
+
+            while loop statement////////////////////
+the while loop statement creates a loop that executes a specified statement
+as long as the test condition evaluates to true
+
+var num =0;
+// block scope
+while(num <= 10){
+    console.log(num); // infinite loop this is called
+    num++;
+}
+
+Do-while loop statement
+
+var num = 0;
+debugger;
+do{
+    console.log(num);
+    num++; 
+}while(num <= 10);
+
+*******for loop*******////////
