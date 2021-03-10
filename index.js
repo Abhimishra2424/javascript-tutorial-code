@@ -287,3 +287,73 @@ do{
 }while(num <= 10);
 
 *******for loop*******////////
+
+for(intilizer; condition ; iteration)
+{
+
+}
+
+Statement 1 sets a variable before the loop starts (var num = 0).
+
+Statement 2 defines the condition for the loop to run (i must be less than 10).
+
+Statement 3 increases a value (num++) each time the code block in the loop has been executed.
+
+for(var num = 0; num < 10; num++){
+    debugger;
+ console.log(num);
+}
+
+for (var i = 0; i < 5; i++) {
+ console.log(i)
+  }
+
+for ( var int = 0 ; int <= 10; int++)
+{
+    console.log(int)
+}
+
+for(var num=1; num<= 10; num++)
+{
+    var table = 15;
+    console.log(table + " * " + num + " =" + (table*num));
+// }
+// * javascript functions *///////////////////////
+
+& what we will see in function
+~function definition
+
+* JavaScript functions are defined with the function keyword.
+* A javascript function is a block of code that designed to perform a particular taks.
+* You can use a function declaration or a function expression.
+
+var a = 10;
+var b = 20;
+var sum = a + b;
+console.log(sum)
+
+function sum(){
+    var a = 290, b = 29289289;
+    var total = a + b;
+    console.log(total); 
+}
+~Calling a function
+calling the  function
+defining fun does not work it
+a javascript fun is executed when "something invokes it (calls it)"
+sum();
+~function parameter
+! function parameters are  the names listed in the functions definition
+~function Arguments
+! function arguments are the real values passed to the function
+
+//    ^ fun parameter vs fun arguments
+function sum(a , b){  //!parameter
+    var total = a + b;
+    console.log(total); 
+}
+sum(28998,88779898); //!arguments
+sum(23,4); //!arguments
+// ~function expressions
+// ~return keyword
+// ~Anonymons function
