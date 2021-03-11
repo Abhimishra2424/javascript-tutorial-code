@@ -354,6 +354,50 @@ function sum(a , b){  //!parameter
 }
 sum(28998,88779898); //!arguments
 sum(23,4); //!arguments
+
+
 // ~function expressions
+function expression simply means
+create a function and put it into the variable
+jab bhi app function ko call kar rahe ho to app ek variable main usko put kardo
+
+function sum(a,b){
+    var total = a+ b;
+    console.log(total);
+}
+var funexp = sum(20,10); // this is called fun exp
+funexp;
+
+
 // ~return keyword
-// ~Anonymons function
+when javascript reaches a return statement
+the function will be stop executing
+
+function sum(a,b){
+   return total = a+b;
+}
+var funexp = sum(20,10); // this is called fun exp
+console.log(funexp);
+
+
+// // ~Anonymons function
+// a functions is a without name is called a anonymous function
+
+var funxep = function(a,b){
+    debugger;
+    return total =a+b;
+}
+var sum = funxep(82,72)
+var sum1 = funxep(82,70)
+console.log("sum of first function " + sum)
+console.log("sun of second function " + sum1)
+console.log("total of first and second functions " + (sum +sum1))
+console.log("first greater than second" + sum > sum1);
+
+
+// interviwes question 
+// why use function
+// you can reuse the code many times and with different arguments 
+// produce different results
+
+// DRY => do not repeat yourself
