@@ -109,11 +109,7 @@ const materials = [
     "sachin",
     "hritik",
     "vikrant",
-    "fiza",
-    "anjali",
-    "abhishekta",
-    "diyali",
-    "ankita"
+    
 ]
 console.log(materials.map(materials => materials.length));
 
@@ -194,3 +190,79 @@ fat arrow function
  });
 
  
+searching and fliter in an array ///
+
+ARRAY prototype indexof() this is method of searching
+returns the first (least) index of an element within the array equal
+to  an element , or -1 not found it search the element from the 0th index number
+
+var array =['abhi','sachin','singh','hritik']
+console.log(array.indexOf("sachin",0))
+
+arrry prototype lastindexof()
+return the last (greatest) index of an element within the array equal to an element
+or -1 if none is found it search the element last to first
+
+var array =['abhi','sachin','singh','hritik']
+console.log(array.lastIndexOf("hritik",))
+
+array prototype includes()
+determines whether the array contains a value,
+returing true or flase as appropriate.
+they was forward searching 
+
+var array =['hey','hello','haha','yes']
+
+console.log(array.includes("haha",4));
+
+Array.prototype.find()
+rturns the found element in the array , if some element in the 
+array satisfies the testing function, or undefined if not found
+only problem is that it return only one element
+
+
+const prices =[100,200,300,400,500,800,900,1000]
+price < 400
+const findelement = prices.find((current)=>{
+    return current > 600;
+})
+console.log(findelement)
+
+this is sort way faster to write
+console.log( prices.find((current ) => current < 400));
+
+
+Array.prototype.findIndex()
+
+The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. 
+Otherwise, it returns -1, indicating that no element passed the test.
+
+const prices =[100,200,300,400,500,800,900,1000]
+console.log( prices.findIndex((current ) => current < 400));
+
+Array.prototype.filter() ******/////
+this method is very use in react and node.js
+vThe filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+const prices =[100,200,300,400,500,800,900,1000]
+
+const pricetag = prices.filter((element ,index,array)=>{
+    return index  ;
+})
+
+console.log(pricetag)
+
+// The following example returns all prime numbers in the array:
+const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+function isPrime(num) {
+    debugger
+  for (let i = 2; num > i; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
