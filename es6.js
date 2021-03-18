@@ -242,7 +242,7 @@ console.log( prices.findIndex((current ) => current < 400));
 
 Array.prototype.filter() ******/////
 this method is very use in react and node.js
-vThe filter() method creates a new array with all elements that pass the test implemented by the provided function.
+The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 
 const prices =[100,200,300,400,500,800,900,1000]
 
@@ -266,3 +266,240 @@ function isPrime(num) {
 }
 
 console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
+
+how to sort and compare an array ***////
+
+Array.prototype.sort()
+
+The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, 
+built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+const months =['march','jan','feb','dec','nov','april']
+
+console.log(months.sort())
+
+const number =[2,34,5,6,5,43,2,32,45,4,332,3,23,1]
+console.log(number.sort())
+
+prototype.compare()
+
+const enCollator = new Intl.Collator('en');
+const deCollator = new Intl.Collator('de');
+const svCollator = new Intl.Collator('sv');
+
+console.log(enCollator.compare('z', 'a') > 0);
+// expected output: true
+
+console.log(deCollator.compare('z', 'ä') > 0);
+// expected output: true
+
+console.log(svCollator.compare('z', 'ä') > 0);
+// expected output: false
+
+
+
+**** how to insert add, replace , and delete elements in array (CRUD)
+
+Array.prototype.push()
+The push() method adds one or more elements to the 
+end of an array and returns the new length of the array.
+
+const animals =['pigs','goats']
+const count = animals.push('chicken','sheep') // yeh add hoga last main 
+console.log(animals);
+console.log(count)
+
+Array.prototype.unshift() // yeh hamko start main add karke deta hai elements
+The unshift() method adds one or more elements to the beginning
+ of an array and returns the new length of the array.
+
+const animals =['pigs','goats']
+const count = animals.unshift('chicken','sheep') 
+console.log(animals);
+console.log(count)
+
+let arr = [4, 5, 6]
+
+arr.unshift(1, 2, 3)
+console.log(arr);
+// [1, 2, 3, 4, 5, 6]
+
+arr = [4, 5, 6] // resetting the array
+
+arr.unshift(1)
+arr.unshift(2)
+arr.unshift(3)
+arr.unshift(8)
+arr.unshift(0)
+
+console.log(arr)
+// [3, 2, 1, 4, 5, 6]
+
+Array.prototype.pop()
+The pop() method removes the last element from an array and 
+returns that element. This method changes the length of the array.
+
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+console.log(plants)
+console.log(plants.pop()); // tomato is remove
+console.log(plants)
+
+Array.prototype.shift()
+The shift() method removes the first element from an array and returns 
+that removed element. This method changes the length of the array.
+
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+console.log(plants)
+console.log(plants.shift()); // broccoli is remove
+console.log(plants)
+
+8: challenge time
+
+start karna index of delete karna uske baad new elements ko add karna
+
+Array.prototype.splice()
+
+The splice() method changes the contents of an array by removing or 
+replacing existing elements and/or adding new elements
+
+
+const months =['jan','march','april','june','july'];
+
+const newMoth = months.splice(months.length,0,"dec");
+console.log(months)
+console.log(newMoth) // empty array mostly  watch delete elements
+
+update march to March
+const months =['jan','march','april','june','july'];
+
+
+const indexofmonth = months.indexOf('june');
+
+if( indexofmonth  !== -1 ){
+    const updatemonth =  months.splice(indexofmonth,1,"June");
+    console.log(months);
+}else{
+    console.log('no such data found')
+} 
+
+june ko delete karo
+const months =['jan','march','april','june','july'];
+
+const indexofmonth = months.indexOf('march');
+
+if( indexofmonth  !== -1 ){
+    const updatemonth =  months.splice(indexofmonth, 2);
+    console.log(months);
+    console.log(updatemonth)
+}else{
+    console.log('no such data found')
+}
+
+Array subsection Map and reduce Methods
+array.prototype.map()
+
+The Map object holds key-value pairs and remembers the original insertion 
+order of the keys. Any value (both objects and primitive values) 
+may be used as either a key or a value.
+
+const array1 = [1,2,3,4,5,43,66,77,44,]
+let newarr = array1.map((currentelement, index ,array ) =>{
+    return currentelement > 43
+})
+console.log(newarr)
+console.log(array1)
+
+let newArr = array1.map((currentelement, index ,array)=>{
+    return `index no =${index } and the value is ${currentelement} belonging to ${array}  `
+})
+console.log(newArr) // give new array and element
+
+it return new array without mutating the orignal array
+let newArrfor = array1.forEach((currentelement, index ,array)=>{
+    return `index no =${index } and the value is ${currentelement} belonging to ${array}  `
+})
+console.log(newArrfor) // undefined
+
+11.  challenge time 
+
+1 . find the square root of each element in the array
+
+let arr = [25,36,49,64,81];
+// 5*5=25
+let arrsqr = arr.map(( currentelement )=> Math.sqrt(currentelement))
+console.log(arrsqr)
+
+2 . multiple each element by 2  and return only those 
+elements which are greater then 10
+
+let arr = [2,3,4,6,8]
+
+let arr2 = arr.map((currentelement)=> currentelement * 2)
+.filter((currentelement)=> currentelement > 10)
+.reduce((accumulator , currentelement)=> {
+    return accumulator += currentelement
+});
+console.log(arr2)
+
+reduce method 
+Array.prototype.reduce()
+
+flatten an array means to convert the 3d and 2d array into
+a single dimensional array
+
+The reduce() method executes a reducer function 
+(that you provide) on each element of the array,
+ resulting in single output value.
+
+Accumulator // ek sath jama karna 
+Current Value
+Current Index
+Source Array
+
+Your reducer function's returned value is assigned to the accumulator, 
+whose value is remembered across each iteration throughout the array, 
+and ultimately becomes the final, single resulting value
+
+let arr = [2,3,5]
+
+let sum = arr.reduce((accumulator , currentelement , index , array)=>{
+    return accumulator += currentelement
+})
+
+console.log(sum);
+
+let arr = [2,3,4,6,8]
+
+let arr2 = arr.map((currentelement)=> currentelement * 2)
+.filter((currentelement)=> currentelement > 10)
+.reduce((accumulator , currentelement)=> {
+    return accumulator *= currentelement
+});
+console.log(arr2)
+
+
+initials values
+let arr = [1,3,5]
+
+let sum = arr.reduce((accumulator , currentelement)=>{
+    debugger
+  return accumulator += currentelement
+},9)
+
+console.log(sum)
+
+converting 2d and 3d array into one dimensional  array
+
+const arr =[['zone1','zone2'],
+            ['zone3','zone4'],
+            ['zone5','zone5'],
+            ['zone7','zone8'],
+            ['zone9','zone10'],
+
+];
+
+let flatarr = arr.reduce((accumulator , currentelement)=>{
+      return accumulator.concat(currentelement);
+})
+console.log(flatarr)
+
