@@ -710,3 +710,115 @@ The split() method divides a String into an ordered list of substrings, puts the
 var txt = "a,b,  |  c,d"  
 console.log(txt.split(","));
 console.log(txt.split(" | "));
+
+
+====================================================================
+
+      section 8        Date and time in javascript            //// 
+
+
+ what we will see
+Date methods ( get  and set)
+Time methods ( get and set)
+
+
+ javascipt date  objects reperesent a single moment in time in a
+platfrom-independent format > Date objects contain a number
+that represents millisecond since 1 january 1970 UTC
+
+creating date bojets
+there are 4 ways to create a new date objects
+
+new Date()
+new Date(year, month , day , hours, minutes, sec , millisec)
+it takes 7 arguments
+new Date(millisec)
+we cannot avoid month section
+new Date(date string)
+
+new Date ()
+date objects  are created with the new date () constructor
+
+let currDate = new Date();
+console.log(currDate);
+
+console.log(new Date());
+
+console.log(new Date().toLocaleString()); // 3/21/2021 , 3:21:10 PM
+
+console.log(new Date().toString()); // sun mar 21  2021 15:22:51 GMT+0530 (india standard time)
+
+Date now ()
+returns the numeric value corresponding to the  current time the number
+if millisec elapsed since january 1 , 1970 00:00:00 UTc
+
+console.log(Date.now());
+
+new Date ( year , month)
+7 numbers specify year , month , day , hours , minute, second
+and millisecond( in that order)
+Note : javascript couts months from 0 to 11
+january is  0 and december 11
+
+var d = new Date()
+console.log(d.toLocaleString());
+
+new Date(datestring)
+creates a new date objects from a date strinng
+
+var d =  new Date("october 13, 2021 11:34:56")
+console.log(d.toLocaleString()); //10/13/2021, 11:34:56 AM
+
+millisecond()
+
+var d = new Date (1235675765226)
+console.log(d.toLocaleString()); 
+
+Dates methods
+
+const curDate = new Date();
+
+// how to get the indivisual date 
+console.log(curDate.toLocaleString());
+console.log(curDate.getFullYear());
+console.log(curDate.getMonth());
+console.log(curDate.getSeconds());
+console.log(curDate.getDate());
+console.log(curDate.getDay());
+
+
+// how to set the indivisual date
+
+const curDate = new Date();
+console.log(curDate.setFullYear(2020 , 10 , 7));
+console.log(curDate.setHours(6));
+console.log(curDate.setMonth(2));
+console.log(curDate.setTime(5));
+
+Time methods
+
+const curtime = new Date ();
+
+console.log(curtime.getTime());
+console.log(curtime.getHours());
+console.log(curtime.getMinutes());
+console.log(curtime.getSeconds());
+console.log(curtime.getMilliseconds());
+
+
+// how to set the indivisual time
+
+const curtime = new Date ();
+
+console.log(curtime.setTime(3));
+console.log(curtime.setHours(7));
+console.log(curtime.setMinutes(45));
+console.log(curtime.setSeconds(32));
+console.log(curtime.setMilliseconds(212314142));
+
+Practice time
+
+const time = new Date().toLocaleTimeString();
+console.log(time);
+const date = new Date().toLocaleDateString();
+console.log(date);
