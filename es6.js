@@ -822,3 +822,67 @@ const time = new Date().toLocaleTimeString();
 console.log(time);
 const date = new Date().toLocaleDateString();
 console.log(date);
+
+
+                    ****** Math object in javascript **** /////
+
+javascript math object allows you to perform mathamatical tasks on number
+
+
+console.log(Math.PI); //  3.141592653589793
+
+Math.round()
+returns the value of x rounded to its nearest integer
+
+let num =11.1673;
+console.log(Math.round(num)); // 11
+
+let num =11.5673;
+console.log(Math.round(num)); // 12
+
+Math.pow()
+math.pow(x, y) returns the value of x to the power of y
+
+console.log(Math.pow(2,3)); 2*2=4*2=8
+console.log(2**3);
+
+Math.sqrt()
+math.sqrt(x) returns the square root of x
+
+console.log(Math.sqrt(25)); // 5
+console.log(Math.sqrt(81)); // 9
+console.log(Math.sqrt(66)); // 8.124......
+
+Math.abs()
+math.abs() return the absolute (psotive) value of x
+
+console.log(Math.abs(-55));
+console.log(Math.abs(-56.4));
+console.log(Math.abs(-558));
+console.log(Math.abs(4-6));
+
+Math.ceil()
+math.ceil() return the value of x rounded up to its nearest interger
+
+console.log(Math.ceil(4.4));// 5
+console.log(Math.ceil(99.01)); // 100 
+
+Math.floor()
+Math.floor() return the value of x rounded down to its nearest int
+
+console.log(Math.floor(4.7)); // 4 ka  4 hi hoga
+console.log(Math.floor(99.9)); // 99 ka 99 hi hoga
+
+console.log(Math.min(-2, -6 ,-200));// -200
+console.log(Math.max(2, -6 ,200));// 200
+
+Math.random()
+Math.random() returns a randow numbber between 0 (inclusive) , and 1 se 9
+
+console.log(Math.floor(Math.random()*10)); // 0 to 9
+
+Math.trunc()
+> the trunc () method return the integer part of number
+
+console.log(Math.trunc(8.4));
+console.log(Math.trunc(-8.4));
