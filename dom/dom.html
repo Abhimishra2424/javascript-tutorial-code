@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-color: blueviolet;
+        }
+      .main{
+          font-size: 50px;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 50px;
+          
+         
+      }
+      button{
+          width: 100px;
+          height: 50px;
+      }
+      button:hover{
+          color: blue;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="main">
+      <div id="one">click here</div>
+      <div class="two">dom two</div>
+      <div class="three"> dom three</div>
+
+      <p id="para">hello kaise ho sab</p>
+      <button onclick="changeContent()">click me </button>
+    </div>
+
+    
+
+
+    <script>
+//     //    document.getElementById('one').onclick = function changeContent(){
+//     //        document.getElementById('one').textContent ="hello";
+//     //        document.getElementById('one').style = "color: red"; 
+//     //    }
+
+//     const changeContent = () =>{
+//     //     document.getElementById('para').innerHTML = "mein theek hoon"
+//     //     document.getElementById('para').style.color = "red";
+//     //     document.getElementById('para').style.fontSize = "90px"
+//     // }
+
+//     // by taking the reference , para is object here
+
+// //     const parachange = document.getElementById('para');
+// //     parachange.innerHTML = 'hello '
+     
+// //    console.log( document.getElementsByTagName('p'));
+
+                // now the same we have is the query selectors 
+                // queryselector return the first matching value whereas 
+                // querySelectorAll( ) will return all the elements
+                   
+           const changeContent = () =>{
+               document.querySelector('#para').innerHTML = "abhhsiek mishra"
+           } 
+
+
+ </script>
+</body>
+</html>
