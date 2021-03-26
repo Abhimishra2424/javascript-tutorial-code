@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+  </head>
+  <body style="background-color: royalblue; display: flex; justify-content: center;
+  align-items: center;">
+    <div style="color:white; font-size: larger;">
+      <label for="">your name</label>
+      <input type="text" id="b" value="" />
+      <br />
+      <label >
+        choose an ice cream flavor
+        <select name="icecreams" id="icecreams"  style="background: yellow;">
+          <option value="">select one</option>
+          <option value="chocolate">chocolate</option>
+          <option value="sardine">sardine</option>
+          <option value="vanilla">vanilla</option>
+        </select>
+      </label>
+      <br />
+      <div id="result"></div>
+    </div>
+
+    <script>
+      // const selectelement = () => {
+      //   const inputchange = document.querySelector("#b").value;
+      //   const icecreams = document.getElementById("icecreams").value;
+      //   const result = document.getElementById("result");
+
+      //   result.innerHTML = ` Mr  ${inputchange} select ${icecreams} ice-cream `;
+      // };
+       
+      //  addEventListener way 
+      const icecreams = document.getElementById("icecreams");
+
+      icecreams.addEventListener('change', ()=>{
+        const inputchange = document.querySelector("#b").value;
+        const icecreams = document.getElementById("icecreams").value;
+        const result = document.getElementById("result");
+
+        result.innerHTML = ` Mr  ${inputchange} select ${icecreams} ice-cream `;
+      });
+
+
+    </script>
+  </body>
+</html>
+
+
+<!-- 
+// / Section 5️⃣ InputEvents in JavaScript 
+// The onchange event occurs when the value of an element has been changed.
+
+// For radiobuttons and checkboxes, the onchange event occurs when the 
+// checked state has been changed. -->

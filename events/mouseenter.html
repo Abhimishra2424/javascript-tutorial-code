@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#square {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<h2>mouse</h2>
+<div id="square"></div>
+
+<script>
+ const mEnter = document.getElementById('square')
+
+ mEnter.addEventListener('mouseenetr',()=>{
+     mEnter.style.backgroundColor = 'red'
+     console.log("mouse enter bro");
+ })
+
+ mEnter.addEventListener('mouseleave',()=>{
+     console.log('mouse leave bro');
+     mEnter.style.backgroundColor = "pink";
+ })
+   
+
+</script>
+
+</body>
+</html> 
