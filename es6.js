@@ -109,6 +109,7 @@
 // ]
 // console.log(materials.map(materials => materials.length));
 
+
 // ************* arrays in javascripts *********************
 
 // when we are use var , we can stored only one valuse at a time
@@ -887,3 +888,116 @@
 // console.log(Math.trunc(8.4));
 // console.log(Math.trunc(-8.4));
 
+
+
+
+// 4️⃣ Destructuring in ES6
+// The destructuring assignment syntax is a JavaScript expression 
+// that makes it possible to unpack values from arrays, 
+// or properties from objects, into distinct variables.
+
+
+  //  ➡ Array Destructuring  🏁
+
+
+// const mydata = ['abhi','sachin','hrithik']
+
+//   // let myname = mydata[0];
+//   // let myfrnd = mydata[1];
+//   // let myfrnd2 = mydata[2];
+
+// //    this is called destructuring 
+// // let [myname, myfrnd, myfrnd2 ] = mydata;
+// // console.log(myfrnd);
+
+//   // we can add values too 
+//   let [myname, myfrnd, myfrnd2 , mydegree="bscit" ] = mydata;
+// console.log(mydegree);
+
+// const fullStack = [
+//     ['HTML', 'CSS', 'JS', 'React'],
+//     ['Node', 'Express', 'MongoDB']
+//   ]
+  
+//   const [frontEnd, backEnd] = fullStack
+//   console.log(frontEnd, backEnd);
+
+
+ // ➡ Object destructuring 🏁
+
+//  const mybiodata = {
+//      myname :"abhi",
+//      myage :20
+//  }
+
+// //  let age = mybiodata.myage;
+// //  let name = mybiodata.myname
+// //  console.log(age);
+// //  console.log(name);
+
+// let {myname , myage , myfrnd='sac'} = mybiodata;
+// console.log(myfrnd);
+
+// 5️⃣ Object Properties /////////
+
+// ➡ we can now use Dynamic Properties 
+
+// let myname = 'abhi'
+// const mybio ={
+//     [myname] : 'that was my name',
+//     [20 + 7] : "that was my age"
+// }
+
+// console.log(mybio);
+
+  // ➡ no need to write key and value, if both are same 
+
+//   let myname = "abhi"
+//   let myage = 20;
+
+//   const mybio ={
+//       myname:myname,
+//       myage :myage
+//   }
+//   console.log(mybio);
+
+//   no need  to write key : value 
+//   let myname = "abhi"
+//   let myage = 20;
+
+//   const mybio ={
+//       myname,
+//       myage 
+//   }
+//   console.log(mybio);
+
+
+// 7️⃣Spread Operator
+
+// const  team1 = ['abhi','sachin'];
+// const team2 = ['hritik ' , 'vikrant']
+// const allteam = [...team1, ...team2]
+
+// console.log(allteam);
+
+// const colors = ['red', 'green', 'blue', 'white', 'pink'];
+// const myColors = ['red', 'green', 'blue', 'white','pink', 'yellow', 'black'];
+
+// //  2nd time add one more color on top and tell we need to write it again 
+// //  on myColor array too 
+
+// const myfavcolor = [ ...colors, 'yellow', 'black'];
+
+// console.log(myfavcolor);
+
+// function sum (a,b,c){
+//     return a + b + c;
+// }
+// const num = [1,2,3];
+
+// console.log(sum(...num));
+
+// let parts = ['shoulders', 'knees'];
+// let lyrics = ['head', ...parts, 'and', 'toes'];
+
+// console.log(lyrics);//  ["head", "shoulders", "knees", "and", "toes"]
