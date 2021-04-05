@@ -171,3 +171,63 @@
 //   }
 // }
 // var conut1 = counter()
+
+// use strict mode'
+// "use strict"
+
+// x = "abhi"
+// console.log(x);
+
+// diff between synchronous and Asynchronous
+
+// synchronous
+
+// const fun2 = () =>{
+//     console.log("function two is called");
+// }
+
+// const fun1 = () =>{
+//     console.log("function 1 is called ");
+//     fun2();
+//     console.log("function 1 is agn called");
+// }
+// fun1();
+
+// Asynchronous
+
+// const fun2 = () =>{
+//     debugger
+//     setTimeout(()=>{
+//         console.log("function 2 is called");
+//     },5000);   
+// }
+// const fun1 = () =>{
+//     console.log("function 1 is called ");
+//     fun2();
+//     console.log("function 1 is agn called");
+// }
+// fun1();
+
+// currying
+// A curried function is a function that takes multiple arguments 
+// one at a time. Given a function with 3 parameters, the curried version will take one 
+// argument and return a function that takes the next argument, which returns a function that takes 
+// the third argument. The last function returns the result of applying the function to all of its arguments.
+
+// const sum = (num1)=> 
+// (num2) => 
+// (num3)=> 
+// (num4)=>
+// console.log(num1+num2+num3+num4);
+// sum(5)(2)(8)(8);
+
+// function sum (num1){
+//     return function(num2){
+//         return function(num3){
+//             console.log(num1+num2+num3);
+//         }
+//     }
+// }
+// sum(2)(5)(5);
+
+// cellback hell 
